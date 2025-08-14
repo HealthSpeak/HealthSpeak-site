@@ -1,0 +1,272 @@
+/*
+ * Global stylesheet for the HealthSpeak website
+ *
+ * This CSS defines colours, typography and layouts for the
+ * navigation bar, sections, contact form, cards and footer.  It
+ * emphasises the purple and orange palette drawn from our logo and
+ * ensures the site remains responsive across devices.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #8000ff; /* purple */
+  --secondary-color: #ff6600; /* orange */
+  --accent-color: #ff9900; /* lighter orange */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --light-gray: #f7f4fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header and navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+.navbar nav a {
+  margin-left: 25px;
+  font-weight: 500;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+.navbar nav a:hover,
+.navbar nav a.active {
+  opacity: 0.8;
+}
+
+/* Main content wrapper */
+main {
+  padding: 60px 5%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+section p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Welcome banner */
+#welcome {
+  background-color: var(--light-gray);
+  border-left: 8px solid var(--accent-color);
+  padding: 30px;
+  border-radius: 8px;
+}
+#welcome h2 {
+  font-size: 2.3rem;
+  color: var(--secondary-color);
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  background-color: var(--light-gray);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.contact-form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+.contact-form button {
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Card lists for resources and products */
+.card-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.card {
+  background-color: var(--light-gray);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+.card p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+.card a {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 5%;
+  background-color: var(--light-gray);
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+footer p {
+  margin: 5px 0;
+}
+footer .social-links a {
+  margin: 0 10px;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+footer .social-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Form page (Speak Appointment) */
+.form-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.form-page h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-page .section-label {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.form-page label {
+  font-weight: 500;
+}
+.form-page input,
+.form-page textarea,
+.form-page select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+.form-page .ai-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+.form-page .ai-button:hover {
+  background-color: var(--secondary-color);
+}
+.form-page .disclaimer {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+.form-page button[type="submit"] {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.form-page button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar nav a {
+    margin-left: 15px;
+    font-size: 0.9rem;
+  }
+  section h2 {
+    font-size: 1.7rem;
+  }
+  #welcome h2 {
+    font-size: 2rem;
+  }
+}

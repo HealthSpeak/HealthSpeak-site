@@ -1,0 +1,153 @@
+<!--
+  speak-appointment.html
+
+  This page contains the HealthSpeak Speak Appointment Form based on the
+  H‑E‑R‑O framework: History, Experiences, Research & Resources,
+  Outcomes & Ongoing Support.  It allows patients to prepare for
+  appointments by collecting information, notes and questions in one
+  place.  AI buttons provide optional guidance but are non‑functional
+  placeholders here.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthSpeak – Speak Appointment Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p7Gptzvb7yDjvu8YQSjZOmhJqAmCb1l5bwEsyL5c/xaiG/nGZb/mVZLqmk2MWsL4l1pDsOKBVwzMK39KHG6T0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="assets/logo.png" alt="HealthSpeak logo" />
+        <span style="font-size:1.2rem;font-weight:600;">HealthSpeak</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="speak-appointment.html" class="active">Speak Form</a>
+        <a href="resources.html">Resources</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="products.html">Products</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="form-page">
+      <h1>Speak Appointment Form</h1>
+      <p class="disclaimer">
+        This form is for preparation and education only.  It does not
+        replace medical advice.  Consult your healthcare provider for
+        personalised care.
+      </p>
+      <form onsubmit="return false;">
+        <!-- History -->
+        <div class="section-label">H — History</div>
+        <label for="reason">Reason for Visit</label>
+        <input
+          id="reason"
+          type="text"
+          placeholder="Main concern or reason for the appointment"
+          required
+        />
+        <label for="symptoms">Describe Symptoms</label>
+        <textarea
+          id="symptoms"
+          rows="4"
+          placeholder="Describe your symptoms and how long you've had them"
+        ></textarea>
+        <button class="ai-button" type="button">Explain symptoms using AI</button>
+        <p class="disclaimer">
+          AI suggestions are for informational purposes only.  Verify all
+          content with your doctor.
+        </p>
+        <label for="history">Relevant History</label>
+        <textarea
+          id="history"
+          rows="3"
+          placeholder="Past diagnoses, procedures or major events relevant to this visit"
+        ></textarea>
+
+        <!-- Experiences -->
+        <div class="section-label">E — Experiences</div>
+        <label for="questions">Top 3 Questions or Concerns</label>
+        <textarea
+          id="questions"
+          rows="3"
+          placeholder="1.\n2.\n3."
+        ></textarea>
+        <label for="meds">Medications & Supplements</label>
+        <textarea
+          id="meds"
+          rows="3"
+          placeholder="Include dosage and frequency"
+        ></textarea>
+        <button class="ai-button" type="button">Explain medications using AI</button>
+        <p class="disclaimer">
+          AI tools are intended to help clarify your understanding, not
+          give medical advice.
+        </p>
+
+        <!-- Research & Resources -->
+        <div class="section-label">R — Research & Resources</div>
+        <label for="terms">Medical Terms or Diagnoses from Appointment</label>
+        <textarea
+          id="terms"
+          rows="2"
+          placeholder="Enter medical terms or diagnoses to research"
+        ></textarea>
+        <button class="ai-button" type="button">Help me understand this</button>
+        <label for="recording">Appointment Recording (optional)</label>
+        <input id="recording" type="file" accept="audio/*,video/*" />
+        <p class="disclaimer">
+          Only upload recordings where all parties have given legal consent.
+        </p>
+
+        <!-- Outcomes & Ongoing Support -->
+        <div class="section-label">O — Outcomes & Ongoing Support</div>
+        <label for="notes">Provider Notes / Key Takeaways</label>
+        <textarea
+          id="notes"
+          rows="4"
+          placeholder="Write what was discussed, prescribed or recommended"
+        ></textarea>
+        <label for="followup">Generate Follow‑Up Email</label>
+        <textarea
+          id="followup"
+          rows="4"
+          placeholder="Summarise your visit or ask for clarification"
+        ></textarea>
+        <button class="ai-button" type="button">Generate follow‑up email with AI</button>
+
+        <!-- SSDI Specific -->
+        <div class="section-label">SSDI‑Specific Notes</div>
+        <label for="ssdi">Are you applying for or receiving Social Security Disability (SSDI)?</label>
+        <select id="ssdi">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+        <label for="limitations">If yes, what did the doctor say about your ability to work?</label>
+        <textarea
+          id="limitations"
+          rows="3"
+          placeholder="Include any limitations, prognosis or quotes from the provider"
+        ></textarea>
+        <button type="submit">Download or Print Completed Form</button>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2025 HealthSpeak. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://tiktok.com/@healthspeak" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@healthspeak" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://substack.com/@healthspeak" target="_blank"><i class="fas fa-newspaper"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>
